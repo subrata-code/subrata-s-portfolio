@@ -1,0 +1,235 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f0f2d;
+    color: white;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #1c1c3c;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 80px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(239, 238, 247);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #5a3b93;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 70vh;
+    padding: 100px 50px;
+    text-align: left;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 28px;
+    margin: 10px 0;
+    color: #a97bff;
+}
+
+.highlight {
+    color: #9a6fe9;
+}
+
+.buttons {
+    margin-top: 70px;
+    justify-content: space-around;
+}
+
+.btn {
+    text-decoration: none;
+    color: rgb(241, 237, 237);
+    padding: 10px 20px;
+    border: 2px solid rgb(242, 232, 232);
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: 0.3s;
+    font-bold: Bold text
+}
+
+.btn:hover {
+    border-color: #a97bff;
+}
+
+/* Hero Image */
+.hero-image {
+    text-align: center;
+    /* Center the text and image */
+}
+
+.hero-image img {
+    width: 400px;
+    height: auto;
+    margin-top: 70px;
+}
+
+/* Style for SUBRATA BAG in hero section */
+.hero-image h1 {
+    font-size: 28px;
+    color: #a97bff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Technical Skills Section */
+.secondsection {
+    max-width: 80vw;
+    margin: auto;
+    padding: 50px 0;
+    text-align: center;
+    background-color: #1c1c3c;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.secondsection h1 {
+    font-size: 36px;
+    color: #a97bff;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.secondsection h1::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #a97bff;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Skill Container */
+.skill-container {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+/* Each Skill */
+.skill {
+    margin: 20px 0;
+}
+
+.skill span {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Skill Bar */
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background: #2c2c54;
+    border-radius: 5px;
+    margin-top: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Skill Fill (Animated Line Progress) */
+.skill-fill {
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #a97bff, #ff7eb3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+/* Skill Fill Percentages */
+.html {
+    width: 90%;
+}
+
+.css {
+    width: 85%;
+}
+
+.js {
+    width: 75%;
+}
+
+.react {
+    width: 70%;
+}
+
+.node {
+    width: 65%;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        margin-top: 30px;
+    }
+
+    .hero-image img {
+        width: 80%;
+        margin: 50px 0;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .secondsection {
+        max-width: 80vw;
+        margin: auto;
+    }
+}
