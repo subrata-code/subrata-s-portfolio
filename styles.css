@@ -209,6 +209,44 @@ h2 {
     width: 65%;
 }
 
+/* Footer Section */
+footer {
+    background-color: #1c1c3c;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 97%;
+    margin-top: 50px;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+footer .social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .social-icons a:hover {
+    transform: scale(1.1);
+}
+
+footer .social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
