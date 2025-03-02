@@ -243,7 +243,7 @@ footer .social-icons img {
 
 footer p {
     font-size: 14px;
-    color: #aaa;
+    color: #aaaaaa;
 }
 
 .burger-menu {
@@ -270,7 +270,7 @@ footer p {
         display: block;
         cursor: pointer;
         font-size: 24px;
-        color: white;
+        color: rgb(131, 77, 77);
         z-index: 1100;
     }
 
@@ -280,7 +280,7 @@ footer p {
         top: 0;
         width: 250px;
         height: 100vh;
-        background: #1c1c3c;
+        background: #2d010e;
         display: flex;
         flex-direction: column;
         justify-content: center;
