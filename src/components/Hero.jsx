@@ -31,8 +31,8 @@ const Hero = () => {
             </button>
             <button className="btn btn-primary shadow-none btn-soft btn-xl w-full md:w-auto">
               <a
-                href="/Resume Subrata.pdf"
-                download="Resume Subrata.pdf"
+                href="/Resume subrata.pdf"
+                download="Resume subrata.pdf"
 
               >
                 Download CV
