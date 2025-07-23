@@ -27,15 +27,15 @@ const Hero = () => {
               >
                 Get in Touch
               </a>
-
             </button>
             <button className="btn btn-primary shadow-none btn-soft btn-xl w-full md:w-auto">
               <a
                 href="/resume.pdf"
-                download="resume.pdf"
-
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-full h-full"
               >
-                Download CV
+                View Resume   
               </a>
             </button>
           </div>
@@ -71,5 +71,4 @@ const Hero = () => {
     </div>
   );
 };
-
 export default Hero;
