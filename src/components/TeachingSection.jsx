@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Code2, Brain, Globe } from "lucide-react";
 import journey from "../assets/journey.jpg";
 
-
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -15,7 +14,7 @@ const fadeInUp = {
 const TeachingSection = () => {
   return (
     <section
-      id="teaching"
+      id="journey" // <-- This id matches your Navbar link!
       className="py-14 bg-gradient-to-b from-gray-50 to-white"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -46,15 +45,13 @@ const TeachingSection = () => {
             className="hidden lg:block"
           >
             <div className="sticky top-24">
-            
               <motion.img
-                src={journey} // replaced Unsplash link with local image
+                src={journey}
                 alt="Coding Journey"
                 className="rounded-2xl shadow-lg object-cover h-[400px] w-full cursor-pointer"
                 whileHover={{ scale: 1.01 }}
                 transition={{ duration: 0.3 }}
               />
-
               <div className="mt-4 text-center">
                 <h4 className="text-lg font-semibold text-gray-800">
                   Engineering Mindset
