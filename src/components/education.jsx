@@ -27,7 +27,11 @@ const containerVariants = {
 const EducationCard = ({ date, title, org, desc }) => (
   <motion.div
     variants={fadeInUp}
-    className="bg-white cursor-pointer rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
+    className="bg-white cursor-pointer rounded-lg p-6 shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-400 border border-gray-100"
+    whileHover={{
+      scale: 1.07,
+      boxShadow: "0 12px 40px 0 rgba(37,99,235,0.25)",
+    }}
   >
     <div className="flex items-start gap-4">
       <div className="bg-blue-50 p-3 rounded-lg">
@@ -70,7 +74,7 @@ const Education = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 drop-shadow-lg">
               Education
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -105,7 +109,7 @@ const Education = () => {
 
           {/* Right Side Image */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }} // Changed from x: -20 to x: 20
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="hidden lg:block order-1 lg:order-2"
@@ -114,12 +118,12 @@ const Education = () => {
               <motion.img
                 src="https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 alt="Education Journey"
-                className="rounded-2xl shadow-lg object-cover h-[400px] w-full"
-                whileHover={{ scale: 1.01 }}
-                transition={{ duration: 0.3 }}
+                className="rounded-2xl shadow-2xl object-cover h-[400px] w-full cursor-pointer transition-transform duration-500 hover:scale-105 hover:shadow-blue-400"
+                whileHover={{ scale: 1.05, boxShadow: "0 8px 32px 0 rgba(37,99,235,0.25)" }}
+                transition={{ duration: 0.4 }}
               />
               <div className="mt-4 text-center">
-                <h4 className="text-lg font-semibold text-gray-800">
+                <h4 className="text-lg font-semibold text-gray-800 drop-shadow">
                   Educational Journey
                 </h4>
                 <p className="text-gray-600 text-sm">
@@ -138,7 +142,7 @@ const Education = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
+          <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center drop-shadow">
             Key Skills & Expertise
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
@@ -146,7 +150,11 @@ const Education = () => {
               <motion.span
                 key={index}
                 variants={fadeInUp}
-                className="px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors duration-300"
+                className="px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-medium hover:bg-blue-100 hover:shadow-lg hover:scale-105 transition-all duration-400 cursor-pointer"
+                whileHover={{
+                  scale: 1.12,
+                  boxShadow: "0 8px 32px 0 rgba(37,99,235,0.25)",
+                }}
               >
                 {skill}
               </motion.span>
