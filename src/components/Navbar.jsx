@@ -28,9 +28,15 @@ const Navbar = () => {
     handleCloseMobile();
   };
 
-  return (
+    return (
     <nav className="flex items-center justify-between px-8 h-20 relative z-20 bg-white">
-      <div>
+      <div className="flex items-center gap-3">
+        {/* Favicon/logo image */}
+        <img
+          src="/favicon_sb.png" // Place _sb.png in your public folder
+          alt="Logo"
+          className="w-9 h-9 rounded-full shadow"
+        />
         <h1 className="font-bold text-2xl tracking-tight">
           {profileData.name}
         </h1>
