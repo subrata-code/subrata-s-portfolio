@@ -34,7 +34,7 @@ const projects = [
       "A beginner-friendly SQL playground to write, run, and learn queries interactively. Features real-time feedback, problem sets, and a mini database to simulate real-world scenarios.",
     image: magnet,
     github: "https://github.com/subrata-code/sql_playground",
-    live: "sql-playground-nu.vercel.app",
+    live: "https://sql-playground-nu.vercel.app",
   },
 ];
 
@@ -54,6 +54,10 @@ const ProjectCard = ({ project, onClick }) => (
     variants={fadeInUp}
     className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer"
     onClick={() => onClick(project)}
+    whileHover={{
+      scale: 1.05,
+      boxShadow: "0 8px 32px 0 rgba(37,99,235,0.18)",
+    }}
   >
     <img
       src={project.image}
@@ -171,24 +175,36 @@ export default function ProjectsSection() {
           ))}
         </div>
 
-        {/* Projects Grid */}
-        <motion.div
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={{
-            visible: {
-              transition: {
-                staggerChildren: 0.1,
+        {/* Projects Grid with AnimatePresence for smooth filter transitions */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={selectedCategory}
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={{
+              visible: {
+                transition: {
+                  staggerChildren: 0.1,
+                },
               },
-            },
-          }}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {filteredProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} onClick={setActiveProject} />
-          ))}
-        </motion.div>
+            }}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+          >
+            {filteredProjects.length > 0 ? (
+              filteredProjects.map((project) => (
+                <ProjectCard key={project.id} project={project} onClick={setActiveProject} />
+              ))
+            ) : (
+              <motion.div
+                className="col-span-full text-center text-gray-500 py-12"
+                variants={fadeInUp}
+              >
+                No projects found in this category.
+              </motion.div>
+            )}
+          </motion.div>
+        </AnimatePresence>
 
         {/* View All Button */}
         <motion.div className="mt-12 text-center" variants={fadeInUp}>

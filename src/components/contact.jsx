@@ -27,11 +27,7 @@ const contactInfo = [
     title: "Address",
     text: profileData.contact.address,
   },
-  {
-    icon: <Clock className="w-6 h-6" />,
-    title: "Research IDs",
-    text: `Scopus ID: ${profileData.contact.scopusID}\nResearcher ID: ${profileData.contact.researcherID || ""}`,
-  },
+  
 ];
 
 const socialLinks = [

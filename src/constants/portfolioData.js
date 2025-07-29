@@ -4,7 +4,7 @@ export const profileData = {
     address: "GopalPur, Amalhanda, Kolaghat, East Medini Pur-721134, West Bengal, India",
     phone: "+91 7478539007",
     email: "subratabag9007@gmail.com",
-    scopusID: "57194130101",
+  
   },
   currentPosition: "3rd-Year Computer Science Student (CGPA 7.86), Skilled in Full-Stack Web Development with React, Node.js, and MongoDB | Focused on Scalable, Real-World Software Solutions",
   summary: `Motivated 3rd-year Computer Science student (CGPA 7.86) skilled in full-stack development (React, Node.js, MongoDB). Passionate about solving real-world problems with scalable, user-friendly software. Eager to contribute and grow as a Software Engineer Intern at top-tier tech companies.`,
