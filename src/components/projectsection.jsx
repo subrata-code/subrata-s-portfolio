@@ -28,13 +28,13 @@ const projects = [
   },
   {
     id: 103,
-    title: "SQL Quest: Interactive SQL Learning & Practice Platform",
+    title: "CollegeStar – Empowering Students Through Knowledge Sharing",
     category: "Next Js",
     description:
-      "A beginner-friendly SQL playground to write, run, and learn queries interactively. Features real-time feedback, problem sets, and a mini database to simulate real-world scenarios.",
+      "CollegeStar is a smart student community platform designed to make learning collaborative and rewarding. It allows students to upload, share, and access academic notes, projects, and study materials anytime, anywhere. By contributing quality content, users earn rewards and recognition while helping their peers succeed. With an interactive community, marketplace, and performance dashboard, CollegeStar turns everyday studying into an engaging and beneficial experience — empowering students to learn, share, and grow together.",
     image: magnet,
-    github: "https://github.com/subrata-code/sql_playground",
-    live: "https://sql-playground-nu.vercel.app",
+    github: "https://github.com/subrata-code/CollegeStar",
+    live: "https://college-star.vercel.app/",
   },
 ];
 
