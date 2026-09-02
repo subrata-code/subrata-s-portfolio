@@ -35,7 +35,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-full h-full"
               >
-                View Resume   
+                View Resume
               </a>
             </button>
           </div>

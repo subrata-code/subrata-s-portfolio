@@ -8,6 +8,7 @@ import {
   Briefcase,
   ArrowRight,
 } from "lucide-react";
+import demoImage from "../assets/demo.jpeg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -79,7 +80,7 @@ const AboutSection = () => {
           >
             <div className="sticky top-24">
               <motion.img
-                src="https://images.unsplash.com/photo-1518481612222-68bbe828ecd1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={demoImage}
                 alt="Professional Journey"
                 className="rounded-2xl shadow-lg object-cover h-[400px] w-full cursor-pointer"
                 whileHover={{ scale: 1.01 }}

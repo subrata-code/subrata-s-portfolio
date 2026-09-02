@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Code2, Brain, Globe } from "lucide-react";
-import journey from "../assets/journey.jpg";
+import journey from "../assets/dp.jpeg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
