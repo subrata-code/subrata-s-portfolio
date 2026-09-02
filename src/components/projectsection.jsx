@@ -8,33 +8,21 @@ import magnet from "../assets/magnet.png";
 const projects = [
   {
     id: 101,
-    title: "MediCon: AI-Powered Smart Health Monitoring & Doctor Connect",
+    title: "AlgoMaster (Ongoing Personal Project)",
     category: "Fullstack Web",
-    description:
-      "MediCon is an IoT-integrated smart healthcare system enabling real-time vitals monitoring (SpO2, BP, heart rate), emergency SOS, doctor discovery, and appointment booking—bridging patients and doctors through intelligent automation.",
+    description: "Developing a comprehensive coding interview preparation platform utilizing the MERN stack to facilitate structured algorithmic learning. Building robust REST APIs with Express.js to manage user profiles, coding roadmaps, and LeetCode progress tracking within MongoDB.",
     image: DImg,
-    github: "https://github.com/Soumojit08/Medicon",
-    live: "https://medicon-za1z.vercel.app/",
+    github: "", // Update link if applicable
+    live: "", // Update link if applicable
   },
   {
     id: 102,
-    title: "Soumili-Robo: AI-Powered Personal Assistant with Voice and Creative Intelligence",
-    category: "Python",
-    description:
-      "Soumili-Robo is an AI-powered robotic assistant designed to provide instant responses, generate poems/songs/stories, speak in a natural female voice, and offer personalized help across domains using internet-connected intelligence.",
-    image: hybrid,
-    github: "https://github.com/subrata-code/SOUMILI_ROBO",
-    live: "",
-  },
-  {
-    id: 103,
-    title: "CollegeStar – Empowering Students Through Knowledge Sharing",
-    category: "Next Js",
-    description:
-      "CollegeStar is a smart student community platform designed to make learning collaborative and rewarding. It allows students to upload, share, and access academic notes, projects, and study materials anytime, anywhere. By contributing quality content, users earn rewards and recognition while helping their peers succeed. With an interactive community, marketplace, and performance dashboard, CollegeStar turns everyday studying into an engaging and beneficial experience — empowering students to learn, share, and grow together.",
-    image: magnet,
-    github: "https://github.com/subrata-code/CollegeStar",
-    live: "https://college-star.vercel.app/",
+    title: "MediCon (Healthcare Innovation Project)",
+    category: "Fullstack Web",
+    description: "Designed and developed a healthcare management solution featuring a responsive interface for appointment booking and patient record. Awarded 3rd Prize among 50+ participating teams at the College Tech Expo; received the 'Best Innovation Idea Award'.",
+    image: hybrid, // Or another appropriate image from assets
+    github: "https://github.com/Soumojit08/Medicon",
+    live: "https://medicon-za1z.vercel.app/",
   },
 ];
 
@@ -150,11 +138,10 @@ export default function ProjectsSection() {
             variants={fadeInUp}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Research Projects
+              My Projects
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Innovative research projects spanning various domains of
-              mechanical engineering and advanced materials
+              A collection of my recent work in full-stack web development and software engineering.
             </p>
           </motion.div>
         </div>
