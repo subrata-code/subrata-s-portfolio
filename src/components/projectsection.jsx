@@ -1,28 +1,37 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
-import DImg from "../assets/4d image.png";
-import hybrid from "../assets/hybrid.jpg";
-import magnet from "../assets/magnet.png";
+import mediImg from "../assets/medi.png";
+import algoImg from "../assets/algo.png";
+import clgImg from "../assets/clg.png";
 
 const projects = [
   {
     id: 101,
-    title: "AlgoMaster (Ongoing Personal Project)",
-    category: "Fullstack Web",
-    description: "Developing a comprehensive coding interview preparation platform utilizing the MERN stack to facilitate structured algorithmic learning. Building robust REST APIs with Express.js to manage user profiles, coding roadmaps, and LeetCode progress tracking within MongoDB.",
-    image: DImg,
-    github: "", // Update link if applicable
-    live: "", // Update link if applicable
-  },
-  {
-    id: 102,
     title: "MediCon (Healthcare Innovation Project)",
     category: "Fullstack Web",
     description: "Designed and developed a healthcare management solution featuring a responsive interface for appointment booking and patient record. Awarded 3rd Prize among 50+ participating teams at the College Tech Expo; received the 'Best Innovation Idea Award'.",
-    image: hybrid, // Or another appropriate image from assets
+    image: mediImg,
     github: "https://github.com/Soumojit08/Medicon",
     live: "https://medicon-za1z.vercel.app/",
+  },
+  {
+    id: 102,
+    title: "Algo Mastery — From Beginner to Problem Solver",
+    category: "Fullstack Web",
+    description: "Developing a comprehensive coding interview preparation platform utilizing the MERN stack to facilitate structured algorithmic learning. Building robust REST APIs with Express.js to manage user profiles, coding roadmaps, and LeetCode progress tracking within MongoDB.",
+    image: algoImg,
+    github: "https://github.com/subrata-code/AlgoMaster",
+    live: "https://algo-master-eight.vercel.app/",
+  },
+  {
+    id: 103,
+    title: "CollegeStar – Empowering Students Through Knowledge Sharing",
+    category: "Next Js",
+    description: "CollegeStar is a smart student community platform designed to make learning collaborative and rewarding. It allows students to upload, share, and access academic notes, projects, and study materials anytime, anywhere. By contributing quality content, users earn rewards and recognition while helping their peers succeed. With an interactive community, marketplace, and performance dashboard, CollegeStar turns everyday studying into an engaging and beneficial experience — empowering students to learn, share, and grow together.",
+    image: clgImg,
+    github: "https://github.com/subrata-code/CollegeStar",
+    live: "https://college-star.vercel.app/",
   },
 ];
 
@@ -153,8 +162,8 @@ export default function ProjectsSection() {
               key={category}
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-full font-medium transition-colors duration-300 ${selectedCategory === category
-                  ? "bg-primary text-white"
-                  : "bg-white text-gray-700 border border-gray-300 hover:border-primary hover:text-primary"
+                ? "bg-primary text-white"
+                : "bg-white text-gray-700 border border-gray-300 hover:border-primary hover:text-primary"
                 }`}
             >
               {category}
