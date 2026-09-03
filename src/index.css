@@ -15,9 +15,11 @@
   transition-timing-function: ease;
 }
 
-/* ── Smooth scroll ─────────────────────────────────── */
-html {
+/* ── Smooth scroll & Overflow ─────────────────────────────────── */
+html, body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* ── Custom Scrollbar ──────────────────────────────── */

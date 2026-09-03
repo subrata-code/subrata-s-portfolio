@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-amber-50 dark:bg-gray-950 text-gray-800 dark:text-gray-100 font-sans">
+    <div className="min-h-screen overflow-x-hidden bg-amber-50 dark:bg-gray-950 text-gray-800 dark:text-gray-100 font-sans">
       <Navbar />
       <main className="pt-20">
         <Routes>
