@@ -126,7 +126,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-gray-50 to-white">
+    <section id="contact" className="py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -136,11 +136,11 @@ export default function ContactSection() {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
             Contact
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Get in touch for software engineering roles, research collaborations, or project inquiries
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            Open to software development opportunities, full-stack & frontend developer roles, and technical discussions around building great products.
           </p>
         </motion.div>
 
@@ -157,14 +157,14 @@ export default function ContactSection() {
               {contactInfo.map(({ icon, title, text }) => (
                 <div
                   key={title}
-                  className="flex items-start gap-4 p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100"
+                  className="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100 dark:border-gray-700"
                 >
-                  <div className="p-3 bg-blue-50 rounded-lg text-blue-600">
+                  <div className="p-3 bg-blue-50 dark:bg-indigo-950 rounded-lg text-blue-600 dark:text-indigo-400">
                     {icon}
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-800">{title}</h4>
-                    <p className="text-gray-600 whitespace-pre-line">{text}</p>
+                    <h4 className="text-lg font-semibold text-gray-800 dark:text-white">{title}</h4>
+                    <p className="text-gray-600 dark:text-gray-400 whitespace-pre-line">{text}</p>
                   </div>
                 </div>
               ))}
@@ -181,7 +181,7 @@ export default function ContactSection() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition-colors duration-300"
+                  className="p-3 bg-blue-50 dark:bg-indigo-950 text-blue-600 dark:text-indigo-400 rounded-lg hover:bg-blue-100 dark:hover:bg-indigo-900 transition-colors duration-300"
                   aria-label={label}
                 >
                   {icon}
@@ -196,7 +196,7 @@ export default function ContactSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
+            className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700"
           >
             <form className="space-y-6" onSubmit={handleSubmit}>
               <AnimatePresence>
@@ -207,14 +207,14 @@ export default function ContactSection() {
                     exit={{ opacity: 0, y: -10 }}
                     className={`p-4 rounded-lg flex items-center gap-3 text-sm font-medium ${
                       status.type === 'success'
-                        ? 'bg-emerald-50 text-emerald-800 border border-emerald-200'
-                        : 'bg-amber-50 text-amber-800 border border-amber-200'
+                        ? 'bg-emerald-50 dark:bg-emerald-950/30 text-emerald-800 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800'
+                        : 'bg-amber-50 dark:bg-amber-950/30 text-amber-800 dark:text-amber-400 border border-amber-200 dark:border-amber-800'
                     }`}
                   >
                     {status.type === 'success' ? (
-                      <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-500 shrink-0" />
                     ) : (
-                      <AlertCircle className="w-5 h-5 text-amber-600 shrink-0" />
+                      <AlertCircle className="w-5 h-5 text-amber-600 dark:text-amber-500 shrink-0" />
                     )}
                     <span>{status.message}</span>
                   </motion.div>
@@ -222,7 +222,7 @@ export default function ContactSection() {
               </AnimatePresence>
 
               <div>
-                <label htmlFor="name" className="block mb-2 text-gray-700 font-medium">
+                <label htmlFor="name" className="block mb-2 text-gray-700 dark:text-gray-300 font-medium">
                   Name
                 </label>
                 <input
@@ -231,12 +231,12 @@ export default function ContactSection() {
                   name="name"
                   required
                   placeholder="Your Name"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 dark:focus:ring-indigo-500 focus:border-transparent outline-none transition-all"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block mb-2 text-gray-700 font-medium">
+                <label htmlFor="email" className="block mb-2 text-gray-700 dark:text-gray-300 font-medium">
                   Email
                 </label>
                 <input
@@ -245,12 +245,12 @@ export default function ContactSection() {
                   name="email"
                   required
                   placeholder="your.email@example.com"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 dark:focus:ring-indigo-500 focus:border-transparent outline-none transition-all"
                 />
               </div>
 
               <div>
-                <label htmlFor="subject" className="block mb-2 text-gray-700 font-medium">
+                <label htmlFor="subject" className="block mb-2 text-gray-700 dark:text-gray-300 font-medium">
                   Subject
                 </label>
                 <input
@@ -259,12 +259,12 @@ export default function ContactSection() {
                   name="subject"
                   required
                   placeholder="Inquiry / Job Opportunity"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 dark:focus:ring-indigo-500 focus:border-transparent outline-none transition-all"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block mb-2 text-gray-700 font-medium">
+                <label htmlFor="message" className="block mb-2 text-gray-700 dark:text-gray-300 font-medium">
                   Message
                 </label>
                 <textarea
@@ -273,14 +273,14 @@ export default function ContactSection() {
                   rows="5"
                   required
                   placeholder="Write your message here..."
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none transition-all"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 dark:focus:ring-indigo-500 focus:border-transparent outline-none resize-none transition-all"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-3.5 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold rounded-lg transition-colors duration-300 flex items-center justify-center gap-2 shadow-md hover:shadow-lg cursor-pointer"
+                className="w-full py-3.5 px-6 bg-blue-600 dark:bg-indigo-600 hover:bg-blue-700 dark:hover:bg-indigo-700 disabled:bg-blue-400 dark:disabled:bg-indigo-400 text-white font-semibold rounded-lg transition-colors duration-300 flex items-center justify-center gap-2 shadow-md hover:shadow-lg cursor-pointer"
               >
                 {isSubmitting ? (
                   <>

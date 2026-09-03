@@ -49,7 +49,7 @@ const fadeInUp = {
 const ProjectCard = ({ project, onClick }) => (
   <motion.div
     variants={fadeInUp}
-    className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer"
+    className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer"
     onClick={() => onClick(project)}
     whileHover={{
       scale: 1.05,
@@ -62,11 +62,11 @@ const ProjectCard = ({ project, onClick }) => (
       className="w-full h-48 object-cover"
     />
     <div className="p-6 text-left">
-      <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
-      <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+      <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">{project.title}</h3>
+      <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3">
         {project.description}
       </p>
-      <span className="inline-block bg-blue-50 text-primary text-xs px-3 py-1 rounded-full">
+      <span className="inline-block bg-blue-50 dark:bg-indigo-950 text-primary dark:text-indigo-400 text-xs px-3 py-1 rounded-full">
         {project.category}
       </span>
     </div>
@@ -81,19 +81,19 @@ const Modal = ({ project, onClose }) => (
         animate={{ x: 0 }}
         exit={{ x: "100%" }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        className="fixed top-0 right-0 w-full sm:w-1/2 h-full bg-white shadow-2xl z-50 p-8 overflow-auto"
+        className="fixed top-0 right-0 w-full sm:w-1/2 h-full bg-white dark:bg-gray-900 shadow-2xl z-50 p-8 overflow-auto"
         style={{ maxWidth: "500px" }}
       >
         <button
-          className="absolute top-4 right-4 text-gray-500 text-2xl"
+          className="absolute top-4 right-4 text-gray-500 dark:text-gray-400 text-2xl"
           onClick={onClose}
         >
           &times;
         </button>
         <img src={project.image} alt={project.title} className="w-full h-48 object-cover mb-4 rounded-lg" />
-        <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-        <p className="text-gray-700 mb-4">{project.description}</p>
-        <span className="inline-block bg-blue-50 text-primary text-xs px-3 py-1 rounded-full mb-4">
+        <h3 className="text-2xl font-bold mb-2 dark:text-white">{project.title}</h3>
+        <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
+        <span className="inline-block bg-blue-50 dark:bg-indigo-950 text-primary dark:text-indigo-400 text-xs px-3 py-1 rounded-full mb-4">
           {project.category}
         </span>
         <div className="flex gap-4 mt-4">
@@ -135,7 +135,7 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="py-16 px-6 bg-gradient-to-b from-gray-50 to-white"
+      className="py-16 px-6 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
@@ -146,10 +146,10 @@ export default function ProjectsSection() {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
               My Projects
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               A collection of my recent work in full-stack web development and software engineering.
             </p>
           </motion.div>
@@ -163,7 +163,7 @@ export default function ProjectsSection() {
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-full font-medium transition-colors duration-300 ${selectedCategory === category
                 ? "bg-primary text-white"
-                : "bg-white text-gray-700 border border-gray-300 hover:border-primary hover:text-primary"
+                : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 hover:border-primary hover:text-primary"
                 }`}
             >
               {category}
@@ -193,7 +193,7 @@ export default function ProjectsSection() {
               ))
             ) : (
               <motion.div
-                className="col-span-full text-center text-gray-500 py-12"
+                className="col-span-full text-center text-gray-500 dark:text-gray-400 py-12"
                 variants={fadeInUp}
               >
                 No projects found in this category.
