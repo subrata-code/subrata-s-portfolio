@@ -133,7 +133,7 @@ export default function DeveloperActivity() {
   const hardPercentage = Math.round((leetcode.hardSolved / (leetcode.totalSolved || 1)) * 100);
 
   return (
-    <section id="activity" className="py-16 bg-gradient-to-b from-white via-gray-50 to-gray-100">
+    <section id="activity" className="py-16 bg-gradient-to-b from-white via-gray-50 to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-900">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -143,10 +143,10 @@ export default function DeveloperActivity() {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 drop-shadow-sm">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4 drop-shadow-sm">
             Developer Activity & Coding Profiles
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-base md:text-lg">
             Real-time open-source contribution metrics from GitHub and problem-solving analytics from LeetCode.
           </p>
         </motion.div>
@@ -158,7 +158,7 @@ export default function DeveloperActivity() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 md:p-8 flex flex-col justify-between hover:shadow-xl transition-all duration-300"
+            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 p-6 md:p-8 flex flex-col justify-between hover:shadow-xl transition-all duration-300"
           >
             <div>
               {/* Header */}
@@ -175,13 +175,13 @@ export default function DeveloperActivity() {
                     </span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
                       {github.name}
                     </h3>
-                    <p className="text-sm font-medium text-gray-500">@{github.username}</p>
+                    <p className="text-sm font-medium text-gray-500 dark:text-gray-400">@{github.username}</p>
                   </div>
                 </div>
-                <span className="px-3 py-1 bg-gray-100 text-gray-800 text-xs font-semibold rounded-full flex items-center gap-1.5">
+                <span className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-xs font-semibold rounded-full flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                   Active Developer
                 </span>
@@ -189,28 +189,28 @@ export default function DeveloperActivity() {
 
               {/* Stats Grid */}
               <div className="grid grid-cols-3 gap-4 mb-6">
-                <div className="bg-gray-50 p-4 rounded-xl text-center border border-gray-100">
+                <div className="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-xl text-center border border-gray-100 dark:border-gray-600">
                   <div className="flex justify-center mb-1 text-gray-700">
                     <BookOpen className="w-5 h-5" />
                   </div>
-                  <div className="text-2xl font-bold text-gray-900">{github.publicRepos}</div>
-                  <div className="text-xs font-medium text-gray-500 mt-0.5">Repositories</div>
+                  <div className="text-2xl font-bold text-gray-900 dark:text-white">{github.publicRepos}</div>
+                  <div className="text-xs font-medium text-gray-500 dark:text-gray-400 mt-0.5">Repositories</div>
                 </div>
 
                 <div className="bg-gray-50 p-4 rounded-xl text-center border border-gray-100">
                   <div className="flex justify-center mb-1 text-gray-700">
                     <Users className="w-5 h-5" />
                   </div>
-                  <div className="text-2xl font-bold text-gray-900">{github.followers}</div>
-                  <div className="text-xs font-medium text-gray-500 mt-0.5">Followers</div>
+                  <div className="text-2xl font-bold text-gray-900 dark:text-white">{github.followers}</div>
+                  <div className="text-xs font-medium text-gray-500 dark:text-gray-400 mt-0.5">Followers</div>
                 </div>
 
                 <div className="bg-gray-50 p-4 rounded-xl text-center border border-gray-100">
                   <div className="flex justify-center mb-1 text-gray-700">
                     <Layers className="w-5 h-5" />
                   </div>
-                  <div className="text-2xl font-bold text-gray-900">{github.following}</div>
-                  <div className="text-xs font-medium text-gray-500 mt-0.5">Following</div>
+                  <div className="text-2xl font-bold text-gray-900 dark:text-white">{github.following}</div>
+                  <div className="text-xs font-medium text-gray-500 dark:text-gray-400 mt-0.5">Following</div>
                 </div>
               </div>
 
@@ -264,7 +264,7 @@ export default function DeveloperActivity() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 md:p-8 flex flex-col justify-between hover:shadow-xl transition-all duration-300"
+            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 p-6 md:p-8 flex flex-col justify-between hover:shadow-xl transition-all duration-300"
           >
             <div>
               {/* Header */}
@@ -274,10 +274,10 @@ export default function DeveloperActivity() {
                     <SiLeetcode className="w-8 h-8 text-amber-600" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
                       LeetCode Stats
                     </h3>
-                    <p className="text-sm font-medium text-gray-500">@{leetcode.username}</p>
+                    <p className="text-sm font-medium text-gray-500 dark:text-gray-400">@{leetcode.username}</p>
                   </div>
                 </div>
                 {leetcode.ranking > 0 && (
@@ -308,9 +308,9 @@ export default function DeveloperActivity() {
                       <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
                       Easy
                     </span>
-                    <span className="text-gray-700">{leetcode.easySolved} Solved</span>
+                    <span className="text-gray-700 dark:text-gray-300">{leetcode.easySolved} Solved</span>
                   </div>
-                  <div className="w-full h-3 bg-gray-100 rounded-full overflow-hidden">
+                  <div className="w-full h-3 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
                     <div
                       className="h-full bg-emerald-500 rounded-full transition-all duration-700"
                       style={{ width: `${Math.min(easyPercentage, 100)}%` }}
@@ -325,7 +325,7 @@ export default function DeveloperActivity() {
                       <span className="w-2.5 h-2.5 rounded-full bg-amber-500 inline-block"></span>
                       Medium
                     </span>
-                    <span className="text-gray-700">{leetcode.mediumSolved} Solved</span>
+                    <span className="text-gray-700 dark:text-gray-300">{leetcode.mediumSolved} Solved</span>
                   </div>
                   <div className="w-full h-3 bg-gray-100 rounded-full overflow-hidden">
                     <div
@@ -342,7 +342,7 @@ export default function DeveloperActivity() {
                       <span className="w-2.5 h-2.5 rounded-full bg-rose-500 inline-block"></span>
                       Hard
                     </span>
-                    <span className="text-gray-700">{leetcode.hardSolved} Solved</span>
+                    <span className="text-gray-700 dark:text-gray-300">{leetcode.hardSolved} Solved</span>
                   </div>
                   <div className="w-full h-3 bg-gray-100 rounded-full overflow-hidden">
                     <div
