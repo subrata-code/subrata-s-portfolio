@@ -140,7 +140,7 @@ export default function ContactSection() {
             Contact
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Get in touch for software engineering roles, research collaborations, or project inquiries
+            Open to software development opportunities, full-stack & frontend developer roles, and technical discussions around building great products.
           </p>
         </motion.div>
 

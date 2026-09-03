@@ -39,8 +39,7 @@ export default function Footer() {
               <a href="/">{profileData.name}</a>
             </h2>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Bridging the gap between theoretical knowledge and practical
-              applications in mechanical engineering.
+              Final-Year B.Tech Computer Science student building modern web applications, interactive 3D digital experiences, and scalable software solutions.
             </p>
           </div>
 
@@ -54,7 +53,7 @@ export default function Footer() {
                 Navigation
               </h3>
               <ul className="space-y-2 text-gray-300">
-                {["Home", "About", "Education", "Journey", "Research"].map(
+                {["Home", "About", "Journey", "Education", "Projects"].map(
                   (item) => (
                     <li key={item}>
                       <a
@@ -71,22 +70,22 @@ export default function Footer() {
 
             <div>
               <h3 className="text-lg font-semibold text-teal-300 mb-3">
-                Resources
+                Connect
               </h3>
               <ul className="space-y-2 text-gray-300">
                 {[
-                  "Publications",
-                  "Projects",
-                  "Testimonials",
-                  "Contact",
-                  "Privacy Policy",
+                  { name: "LinkedIn", href: "https://www.linkedin.com/in/subrata-bag-547091293/" },
+                  { name: "GitHub", href: "https://github.com/subrata-code" },
+                  { name: "Contact", href: "#contact" },
                 ].map((item) => (
-                  <li key={item}>
+                  <li key={item.name}>
                     <a
-                      href={`#${item.toLowerCase().replace(/ /g, "")}`}
+                      href={item.href}
+                      target={item.href.startsWith("http") ? "_blank" : "_self"}
+                      rel={item.href.startsWith("http") ? "noopener noreferrer" : ""}
                       className="hover:text-white transition-all duration-200 hover:pl-1"
                     >
-                      {item}
+                      {item.name}
                     </a>
                   </li>
                 ))}

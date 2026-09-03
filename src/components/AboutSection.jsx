@@ -65,7 +65,7 @@ const AboutSection = () => {
               About
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Learn more about my professional journey and expertise
+              Learn more about my background, software development focus, and technical experience
             </p>
           </motion.div>
         </div>
@@ -111,7 +111,7 @@ const AboutSection = () => {
                   {profileData.name}
                 </h3>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  {profileData.summary}
+                  Subrata Bag is a final-year B.Tech Computer Science & Engineering student at Calcutta Institute of Technology (affiliated with MAKAUT) with a strong focus on software development. With practical development experience across frontend and backend engineering, he builds modern web applications and interactive digital experiences. His core technical toolkit spans React, JavaScript, Node.js, Express.js, and MongoDB, alongside browser-based 3D web development using Three.js and React Three Fiber. Grounded in computer science fundamentals and Data Structures & Algorithms, Subrata is focused on writing clean, efficient code and creating real-world software applications that deliver intuitive, high-quality user experiences.
                 </p>
               </motion.div>
 
@@ -131,22 +131,38 @@ const AboutSection = () => {
                   },
                   {
                     icon: <Calendar className="w-6 h-6" />,
-                    text: "Web Developer",
-                    label: "Experience",
-                  },
-                  {
-                    icon: <FileText className="w-6 h-6" />,
-                    text: "Software Engineer",
-                    label: " clean, confident, and goal-aligned.",
+                    text: "Calcutta Institute of Technology (MAKAUT)",
+                    label: "Institution",
                   },
                   {
                     icon: <Briefcase className="w-6 h-6" />,
-                    text: profileData.currentPosition,
-                    label: "Current Role",
+                    text: "Three.js / React Three Fiber Developer",
+                    label: "Relevant Experience",
+                  },
+                  {
+                    icon: <FileText className="w-6 h-6" />,
+                    text: "Final-Year B.Tech CSE Student",
+                    label: "Academic Status",
                   },
                 ].map((item, index) => (
                   <CredentialItem key={index} {...item} />
                 ))}
+              </motion.div>
+
+              {/* Experience Section */}
+              <motion.div variants={fadeInUp} className="bg-white p-6 rounded-xl shadow-md border border-gray-100 space-y-3">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-800">Azmth Labs Pvt. Ltd.</h4>
+                    <p className="text-blue-600 font-medium text-sm">Three.js / React Three Fiber Developer</p>
+                  </div>
+                  <span className="text-xs px-3 py-1 bg-blue-50 text-blue-700 font-semibold rounded-full w-fit">Work Experience</span>
+                </div>
+                <ul className="space-y-2 text-gray-600 text-sm list-disc pl-5">
+                  {profileData.workHistory[0].bullets.map((bullet, idx) => (
+                    <li key={idx}>{bullet}</li>
+                  ))}
+                </ul>
               </motion.div>
 
               {/* Contact Information */}

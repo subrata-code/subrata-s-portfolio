@@ -10,11 +10,11 @@ const Hero = () => {
       <div className="flex-1 flex flex-col md:flex-row items-center justify-between px-6 md:px-10 py-8">
         {/* Left Section */}
         <div className="w-full md:w-1/2 flex flex-col gap-4 text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl font-bold text-amber-50 leading-tight">
-            Engineering Excellence Through Education
+          <h1 className="text-4xl md:text-5xl font-bold text-amber-50 leading-tight">
+            Final-Year Computer Science Student & Software Developer
           </h1>
-          <p className="text-base md:text-lg text-gray-300">
-            {profileData.summary}
+          <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+            Final-year B.Tech CSE student at Calcutta Institute of Technology (MAKAUT) with practical development experience building modern web applications and interactive digital experiences. Skilled across React, JavaScript, Node.js, Express.js, MongoDB, and Three.js / React Three Fiber, and actively seeking software development opportunities.
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 mt-4 justify-center md:justify-start">

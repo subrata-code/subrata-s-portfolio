@@ -1,6 +1,47 @@
 import { motion } from "framer-motion";
 import { profileData } from "../constants/portfolioData";
 import { GraduationCap, Building, Calendar, FileText } from "lucide-react";
+import {
+  SiReact,
+  SiJavascript,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiThreedotjs,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiPython,
+  SiC,
+  SiGit,
+  SiGithub,
+  SiPostman,
+  SiHtml5,
+  SiCss3,
+} from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+import { TbBrandThreejs, TbBinaryTree, TbApi } from "react-icons/tb";
+
+const skillIcons = [
+  { name: "React", icon: <SiReact className="w-8 h-8 text-[#61DAFB]" /> },
+  { name: "JavaScript", icon: <SiJavascript className="w-8 h-8 text-[#F7DF1E]" /> },
+  { name: "Node.js", icon: <SiNodedotjs className="w-8 h-8 text-[#5FA04E]" /> },
+  { name: "Express.js", icon: <SiExpress className="w-8 h-8 text-[#181717]" /> },
+  { name: "MongoDB", icon: <SiMongodb className="w-8 h-8 text-[#47A248]" /> },
+  { name: "Three.js", icon: <SiThreedotjs className="w-8 h-8 text-[#000000]" /> },
+  { name: "React Three Fiber", icon: <TbBrandThreejs className="w-8 h-8 text-[#000000]" /> },
+  { name: "Next.js", icon: <SiNextdotjs className="w-8 h-8 text-[#000000]" /> },
+  { name: "Tailwind CSS", icon: <SiTailwindcss className="w-8 h-8 text-[#06B6D4]" /> },
+  { name: "Java", icon: <FaJava className="w-8 h-8 text-[#007396]" /> },
+  { name: "Python", icon: <SiPython className="w-8 h-8 text-[#3776AB]" /> },
+  { name: "C", icon: <SiC className="w-8 h-8 text-[#A8B9CC]" /> },
+  { name: "Data Structures & Algorithms", icon: <TbBinaryTree className="w-8 h-8 text-[#6366F1]" /> },
+  { name: "Git", icon: <SiGit className="w-8 h-8 text-[#F05032]" /> },
+  { name: "GitHub", icon: <SiGithub className="w-8 h-8 text-[#181717]" /> },
+  { name: "REST APIs", icon: <TbApi className="w-8 h-8 text-[#0284C7]" /> },
+  { name: "Postman", icon: <SiPostman className="w-8 h-8 text-[#FF6C37]" /> },
+  { name: "HTML5", icon: <SiHtml5 className="w-8 h-8 text-[#E34F26]" /> },
+  { name: "CSS3", icon: <SiCss3 className="w-8 h-8 text-[#1572B6]" /> },
+];
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -78,8 +119,7 @@ const Education = () => {
               Education
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Academic journey and qualifications shaping expertise in
-              mechanical engineering and advanced materials research
+              Academic foundation shaping expertise in Computer Science, Software Engineering, and Web Development
             </p>
           </motion.div>
         </div>
@@ -134,7 +174,7 @@ const Education = () => {
           </motion.div>
         </div>
 
-        {/* Skills Section */}
+        {/* Skills Section — Icons Only */}
         <motion.div
           className="mt-16"
           variants={fadeInUp}
@@ -142,22 +182,24 @@ const Education = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center drop-shadow">
-            Key Skills & Expertise
+          <h3 className="text-2xl font-semibold text-gray-800 mb-8 text-center drop-shadow">
+            Technologies & Skills
           </h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            {profileData.skills.map((skill, index) => (
-              <motion.span
+          <div className="flex flex-wrap justify-center items-center gap-5 max-w-4xl mx-auto">
+            {skillIcons.map((skill, index) => (
+              <motion.div
                 key={index}
                 variants={fadeInUp}
-                className="px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-medium hover:bg-blue-100 hover:shadow-lg hover:scale-105 transition-all duration-400 cursor-pointer"
+                className="p-4 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center hover:shadow-xl transition-all duration-300 cursor-pointer"
                 whileHover={{
-                  scale: 1.12,
-                  boxShadow: "0 8px 32px 0 rgba(37,99,235,0.25)",
+                  scale: 1.15,
+                  boxShadow: "0 10px 25px -5px rgba(37,99,235,0.25)",
                 }}
+                title={skill.name}
+                aria-label={skill.name}
               >
-                {skill}
-              </motion.span>
+                {skill.icon}
+              </motion.div>
             ))}
           </div>
         </motion.div>

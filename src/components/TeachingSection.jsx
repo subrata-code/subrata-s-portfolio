@@ -72,15 +72,15 @@ const TeachingSection = () => {
               viewport={{ once: true }}
             >
               <h3 className="text-3xl font-semibold mb-4 text-indigo-700 drop-shadow">
-                My Engineering Philosophy
+                My Engineering Approach
               </h3>
               <p className="text-lg leading-relaxed text-gray-700">
-                As a passionate Computer Science student, I believe in learning by building.
-                My journey in software engineering is driven by curiosity, code, and a love for solving practical problems.
+                As a final-year Computer Science student, I believe in learning by building real software.
+                My approach to software engineering combines strong core fundamentals in Data Structures & Algorithms with practical development experience.
               </p>
               <p className="text-lg leading-relaxed text-gray-700 mt-2">
-                From mastering core concepts in DSA and system design to building full-stack apps using React, Node.js, and MongoDB,
-                I strive to transform ideas into impactful software that can scale and serve users meaningfully.
+                From building full-stack web applications with React, Node.js, and MongoDB to engineering interactive 3D web experiences using Three.js and React Three Fiber,
+                I focus on creating scalable, clean, and reliable software.
               </p>
             </motion.div>
 
@@ -88,18 +88,18 @@ const TeachingSection = () => {
             <div className="space-y-8">
               {[
                 {
-                  title: "Code-First Learning",
-                  desc: "Building real-world apps using React, Node.js, and MongoDB",
+                  title: "Full-Stack Development",
+                  desc: "Building responsive web applications using React, Node.js, Express.js, and MongoDB",
                   icon: <Code2 className="w-10 h-10 text-indigo-500" />,
                 },
                 {
-                  title: "Problem Solving",
-                  desc: "Sharpening logic through DSA with C, Java, and Python",
+                  title: "Problem Solving & DSA",
+                  desc: "Sharpening logic through Data Structures & Algorithms with Java, Python, and C",
                   icon: <Brain className="w-10 h-10 text-indigo-500" />,
                 },
                 {
-                  title: "Future-Ready Skills",
-                  desc: "Exploring AI/ML with TensorFlow and Python",
+                  title: "Interactive 3D Web Experiences",
+                  desc: "Building browser-based 3D graphics and UI using Three.js and React Three Fiber",
                   icon: <Globe className="w-10 h-10 text-indigo-500" />,
                 },
               ].map((method, idx) => (
