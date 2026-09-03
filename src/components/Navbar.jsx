@@ -63,6 +63,11 @@ const Navbar = () => {
               </a>
             </li>
             <li className="px-4 py-2 hover:bg-gray-100">
+              <a href="#activity" onClick={handleNavClick("activity")}>
+                Activity
+              </a>
+            </li>
+            <li className="px-4 py-2 hover:bg-gray-100">
               <a href="#projects" onClick={handleNavClick("projects")}>
                 Projects
               </a>
@@ -95,6 +100,9 @@ const Navbar = () => {
           </li>
           <li className="px-4 py-2 hover:bg-gray-100">
             <a href="#about" onClick={handleNavClick("about")}>About</a>
+          </li>
+          <li className="px-4 py-2 hover:bg-gray-100">
+            <a href="#activity" onClick={handleNavClick("activity")}>Activity</a>
           </li>
           <li className="px-4 py-2 hover:bg-gray-100">
             <a href="#projects" onClick={handleNavClick("projects")}>Projects</a>

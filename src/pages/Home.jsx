@@ -1,22 +1,24 @@
 import React from "react";
 import Hero from "../components/Hero";
-import AboutSection from "../components/AboutSection"; // Import AboutSection
-import Education from "../components/education"; // Import Education
-import TeachingSection from "../components/TeachingSection"; // Corrected import path
-import ProjectsSection from "../components/projectsection"; // Import ProjectsSection
-import ContactSection from "../components/contact"; // Corrected import for ContactSection
-import Footer from "../components/Footer"; // Import Footer
+import AboutSection from "../components/AboutSection";
+import Education from "../components/education";
+import TeachingSection from "../components/TeachingSection";
+import DeveloperActivity from "../components/DeveloperActivity";
+import ProjectsSection from "../components/projectsection";
+import ContactSection from "../components/contact";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
     <>
       <Hero />
       <AboutSection />
-      <Education /> {/* Add Education here */}
-      <TeachingSection /> {/* TeachingSection component */}
-      <ProjectsSection /> {/* ProjectsSection component */}
-      <ContactSection /> {/* ContactSection component */}
-      <Footer /> {/* Footer component */}
+      <Education />
+      <TeachingSection />
+      <DeveloperActivity />
+      <ProjectsSection />
+      <ContactSection />
+      <Footer />
     </>
   );
 };
