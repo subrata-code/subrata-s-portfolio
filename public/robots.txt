@@ -1,0 +1,8 @@
+# Robots.txt for Subrata Bag's Portfolio
+# Allow all search engine crawlers for maximum indexing and SEO ranking
+
+User-agent: *
+Allow: /
+
+# Canonical Sitemap URL
+Sitemap: https://subrata-s-portfolio.vercel.app/sitemap.xml

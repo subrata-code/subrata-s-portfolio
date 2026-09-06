@@ -106,9 +106,11 @@ const Education = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex flex-col items-center mb-16">
           <motion.div className="text-center" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Education</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
+              Education & Technical Foundation
+            </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Academic foundation shaping expertise in Computer Science, Software Engineering, and Web Development
+              Academic foundation in Computer Science & Engineering, Data Structures & Algorithms, and modern web application development
             </p>
           </motion.div>
         </div>
@@ -133,7 +135,8 @@ const Education = () => {
               >
                 <motion.img
                   src="https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  alt="Education Journey"
+                  alt="Subrata Bag - Computer Science Education & Academic Foundation"
+                  loading="lazy"
                   className="rounded-2xl shadow-2xl object-cover h-[400px] w-full cursor-pointer"
                   whileHover={{ scale: 1.05, boxShadow: "0 8px 32px 0 rgba(37,99,235,0.25)" }}
                   transition={{ duration: 0.4 }}

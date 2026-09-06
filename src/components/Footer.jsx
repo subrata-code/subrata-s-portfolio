@@ -41,34 +41,43 @@ export default function Footer() {
               <h2 className="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-teal-400 dark:to-cyan-500 bg-clip-text text-transparent inline-block">
                 <a href="/">{profileData.name}</a>
               </h2>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed max-w-sm">
-                Final-Year B.Tech Computer Science student building modern web applications, interactive digital experiences, and scalable software solutions.
+              <p className="text-xs uppercase tracking-wider font-semibold text-indigo-600 dark:text-teal-400">
+                Full-Stack Software Developer & Freelance Web Engineer
               </p>
-              <div className="pt-4 flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed max-w-sm">
+                Engineering high-performance web applications, scalable MERN architectures, and interactive 3D web experiences with React, Node.js, and Three.js. Available for remote freelance contracts and engineering roles worldwide.
+              </p>
+              <div className="pt-2 flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
                 <span>Built with</span>
                 <Heart className="w-4 h-4 text-red-500 animate-pulse" />
-                <span>in India</span>
+                <span>in India • Available Worldwide</span>
               </div>
             </div>
 
             {/* Navigation */}
             <div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-teal-300 mb-4">
-                Navigation
+                Quick Links
               </h3>
               <ul className="space-y-3 text-gray-600 dark:text-gray-400 text-sm">
-                {["Home", "About", "Journey", "Education", "Projects"].map(
-                  (item) => (
-                    <li key={item}>
-                      <a
-                        href={`#${item.toLowerCase()}`}
-                        className="hover:text-blue-600 dark:hover:text-white transition-all duration-200 hover:pl-1 inline-block"
-                      >
-                        {item}
-                      </a>
-                    </li>
-                  )
-                )}
+                {[
+                  { name: "Home", href: "#" },
+                  { name: "About Me", href: "#about" },
+                  { name: "Journey", href: "#journey" },
+                  { name: "Education", href: "#education" },
+                  { name: "Activity", href: "#activity" },
+                  { name: "Projects", href: "#projects" },
+                  { name: "Contact", href: "#contact" },
+                ].map((item) => (
+                  <li key={item.name}>
+                    <a
+                      href={item.href}
+                      className="hover:text-blue-600 dark:hover:text-white transition-all duration-200 hover:pl-1 inline-block"
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -76,13 +85,15 @@ export default function Footer() {
             <div className="space-y-6">
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-teal-300 mb-4">
-                  Connect
+                  Connect & Hire
                 </h3>
                 <ul className="space-y-3 text-gray-600 dark:text-gray-400 text-sm">
                   {[
                     { name: "LinkedIn", href: "https://www.linkedin.com/in/subrata-bag-547091293/" },
                     { name: "GitHub", href: "https://github.com/subrata-code" },
-                    { name: "Contact", href: "#contact" },
+                    { name: "LeetCode", href: "https://leetcode.com/u/subrata2005/" },
+                    { name: "Twitter / X", href: "https://x.com/subrata_ba76261" },
+                    { name: "Contact / Hire", href: "#contact" },
                   ].map((item) => (
                     <li key={item.name}>
                       <a
@@ -102,7 +113,7 @@ export default function Footer() {
               <div className="pt-2">
                 <button
                   onClick={() => setIsPaymentModalOpen(true)}
-                  className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-3 bg-[#FFDD00] hover:bg-[#FFEA00] text-black font-semibold rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-3 bg-[#FFDD00] hover:bg-[#FFEA00] text-black font-semibold rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
                 >
                   <Coffee className="w-5 h-5" />
                   Buy me a Coffee
@@ -114,10 +125,10 @@ export default function Footer() {
           {/* Footer Bottom */}
           <div className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-center text-gray-500 dark:text-gray-500 text-sm tracking-wide">
-              &copy; {new Date().getFullYear()} Subrata Bag. All rights reserved.
+              &copy; {new Date().getFullYear()} Subrata Bag. Full-Stack & Freelance Software Developer. All rights reserved.
             </p>
-            <p className="text-center text-xs text-gray-400 dark:text-gray-600">
-              Proprietary Code. Do not copy without permission.
+            <p className="text-center text-xs text-gray-400 dark:text-gray-500">
+              React • Next.js • Three.js • Node.js • MERN Stack
             </p>
           </div>
         </div>

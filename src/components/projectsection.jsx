@@ -47,30 +47,35 @@ const fadeInUp = {
 };
 
 const ProjectCard = ({ project, onClick }) => (
-  <motion.div
+  <motion.article
     variants={fadeInUp}
-    className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer"
+    className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between"
     onClick={() => onClick(project)}
     whileHover={{
-      scale: 1.05,
+      scale: 1.04,
       boxShadow: "0 8px 32px 0 rgba(37,99,235,0.18)",
     }}
   >
     <img
       src={project.image}
-      alt={project.title}
+      alt={`${project.title} — Web Development Project by Subrata Bag`}
+      loading="lazy"
       className="w-full h-48 object-cover"
     />
-    <div className="p-6 text-left">
-      <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">{project.title}</h3>
-      <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3">
-        {project.description}
-      </p>
-      <span className="inline-block bg-blue-50 dark:bg-indigo-950 text-primary dark:text-indigo-400 text-xs px-3 py-1 rounded-full">
-        {project.category}
-      </span>
+    <div className="p-6 text-left flex-1 flex flex-col justify-between">
+      <div>
+        <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">{project.title}</h3>
+        <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3">
+          {project.description}
+        </p>
+      </div>
+      <div>
+        <span className="inline-block bg-blue-50 dark:bg-indigo-950 text-primary dark:text-indigo-400 text-xs px-3 py-1 rounded-full font-medium">
+          {project.category}
+        </span>
+      </div>
     </div>
-  </motion.div>
+  </motion.article>
 );
 
 const Modal = ({ project, onClose }) => (
@@ -147,10 +152,10 @@ export default function ProjectsSection() {
             variants={fadeInUp}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
-              My Projects
+              Featured Software Projects & Web Applications
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              A collection of my recent work in full-stack web development and software engineering.
+              A curated showcase of full-stack web applications, collaborative platforms, and interactive digital solutions engineered by Subrata Bag.
             </p>
           </motion.div>
         </div>

@@ -137,10 +137,10 @@ export default function ContactSection() {
           variants={fadeInUp}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
-            Contact
+            Get in Touch | Hire Me for Freelance & Engineering Projects
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Open to software development opportunities, full-stack & frontend developer roles, and technical discussions around building great products.
+            Available for freelance web application development, custom React & Three.js consulting, and full-time software engineering roles worldwide. Send a message to discuss your next project.
           </p>
         </motion.div>
 

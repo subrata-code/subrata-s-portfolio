@@ -48,35 +48,41 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
         >
-          {/* Badge */}
-          <motion.div variants={itemVariants} className="flex justify-center md:justify-start">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 backdrop-blur-sm border border-white/10 text-indigo-300 text-xs font-semibold rounded-full">
+          {/* Status Badge */}
+          <motion.div variants={itemVariants} className="flex justify-center md:justify-start flex-wrap gap-2">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-500/10 backdrop-blur-sm border border-emerald-500/20 text-emerald-300 text-xs font-semibold rounded-full shadow-sm">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              Open to Opportunities
+              Available for Freelance & Full-Time Roles
+            </span>
+            <span className="hidden sm:inline-flex items-center px-3 py-1 bg-white/5 border border-white/10 text-indigo-300 text-xs font-medium rounded-full">
+              Full-Stack & 3D Web
             </span>
           </motion.div>
 
           <motion.h1
             variants={itemVariants}
-            className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight"
+            className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight"
           >
-            <span className="text-white">Final-Year </span>
+            <span className="text-white">Full-Stack </span>
             <span className="bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Computer Science
+              Software Developer
             </span>
             <br />
-            <span className="text-white">Student & </span>
+            <span className="text-white">& Freelance </span>
             <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-              Software Developer
+              Web Engineer
             </span>
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
-            className="text-sm md:text-base text-gray-400 leading-relaxed max-w-xl"
+            className="text-sm md:text-base text-gray-300 leading-relaxed max-w-xl"
           >
-            Building modern web applications and interactive 3D digital experiences with
-            React, Node.js, Three.js & more. Focused on scalable, real-world software.
+            I build modern, scalable web applications and immersive 3D digital experiences using{" "}
+            <span className="text-indigo-300 font-semibold">React</span>,{" "}
+            <span className="text-blue-300 font-semibold">Node.js</span>,{" "}
+            <span className="text-emerald-300 font-semibold">MongoDB</span>, and{" "}
+            <span className="text-cyan-300 font-semibold">Three.js</span>. Final-year CSE student available for freelance contracts, client web solutions, and software engineering roles.
           </motion.p>
 
           <motion.div
@@ -87,15 +93,19 @@ const Hero = () => {
               href="https://www.linkedin.com/in/subrata-bag-547091293/"
               target="_blank"
               rel="noopener noreferrer"
+              title="Connect with Subrata Bag on LinkedIn for freelance and career opportunities"
+              aria-label="Connect with Subrata Bag on LinkedIn"
               className="group px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white font-semibold rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/25 hover:shadow-xl hover:shadow-indigo-500/30 transition-all duration-300 transform hover:-translate-y-0.5"
             >
-              Get in Touch
+              Hire Me / Get in Touch
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
             <a
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              title="Download Subrata Bag's Software Developer Resume"
+              aria-label="View Subrata Bag's Resume"
               className="group px-6 py-3 bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl flex items-center justify-center gap-2 transition-all duration-300 transform hover:-translate-y-0.5"
             >
               <FileText className="w-4 h-4" />
@@ -117,13 +127,15 @@ const Hero = () => {
               <img
                 className="h-full w-full object-cover aspect-[3/4] transition-transform duration-700 group-hover:scale-105"
                 src={demo}
-                alt="Subrata Bag"
+                alt="Subrata Bag - Full-Stack Software Developer & Freelance Web Engineer"
+                fetchPriority="high"
+                loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/90 via-transparent to-transparent flex items-end justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="text-center text-white px-4 pb-6">
                   <h2 className="text-xl font-bold mb-1">Subrata Bag</h2>
                   <p className="text-sm text-indigo-300">
-                    {profileData.currentPosition}
+                    Full-Stack & Freelance Software Developer
                   </p>
                 </div>
               </div>

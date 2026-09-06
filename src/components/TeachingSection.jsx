@@ -28,10 +28,10 @@ const TeachingSection = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white mb-4">
-              Journey
+              Engineering Mindset & Development Journey
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
-              Growing as a software engineer through code, curiosity, and continuous learning
+              Engineering robust full-stack software and interactive 3D web applications through continuous learning, clean architecture, and problem solving.
             </p>
           </motion.div>
         </div>
@@ -48,7 +48,7 @@ const TeachingSection = () => {
               >
                 <motion.img
                   src={journey}
-                  alt="Coding Journey"
+                  alt="Subrata Bag - Software Engineering Mindset & Coding Journey"
                   className="rounded-2xl shadow-2xl object-cover h-[400px] w-full cursor-pointer"
                   whileHover={{ scale: 1.05, boxShadow: "0 8px 32px 0 rgba(99,102,241,0.25)" }}
                   transition={{ duration: 0.4 }}
