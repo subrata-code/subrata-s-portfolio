@@ -70,35 +70,37 @@ const AboutSection = () => {
           </motion.div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-10">
-          {/* Left Side Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="hidden lg:block"
-          >
-            <div className="sticky top-24">
-              <div className="relative">
-                <div className="absolute -inset-2 bg-gradient-to-r from-indigo-200/50 to-blue-200/50 dark:from-indigo-800/30 dark:to-blue-800/30 rounded-2xl blur-xl" />
-                <motion.img
-                  src={demoImage}
-                  alt="Professional Journey"
-                  className="relative rounded-2xl shadow-lg object-cover h-[400px] w-full cursor-pointer"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </div>
-              <div className="mt-4 text-center">
-                <h4 className="text-lg font-bold text-gray-800 dark:text-white">
-                  {profileData.name}
-                </h4>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">
-                  {profileData.currentPosition}
-                </p>
-              </div>
+        <div className="grid lg:grid-cols-3 gap-10 items-start">
+          {/* Left Side Image — Sticky & Stable while content scrolls */}
+          <div className="hidden lg:block h-full">
+            <div className="sticky top-28 self-start z-10">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+              >
+                <div className="relative">
+                  <div className="absolute -inset-2 bg-gradient-to-r from-indigo-200/50 to-blue-200/50 dark:from-indigo-800/30 dark:to-blue-800/30 rounded-2xl blur-xl" />
+                  <motion.img
+                    src={demoImage}
+                    alt="Professional Journey"
+                    className="relative rounded-2xl shadow-lg object-cover h-[400px] w-full cursor-pointer"
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </div>
+                <div className="mt-4 text-center">
+                  <h4 className="text-lg font-bold text-gray-800 dark:text-white">
+                    {profileData.name}
+                  </h4>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm">
+                    {profileData.currentPosition}
+                  </p>
+                </div>
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Content Area */}
           <div className="lg:col-span-2">

@@ -113,7 +113,7 @@ const Education = () => {
           </motion.div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid lg:grid-cols-3 gap-8 mb-16 items-start">
           <div className="lg:col-span-2 order-2 lg:order-1">
             <motion.div className="grid gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               {profileData.education.map((edu, index) => (
@@ -122,26 +122,29 @@ const Education = () => {
             </motion.div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="hidden lg:block order-1 lg:order-2"
-          >
-            <div className="sticky top-24">
-              <motion.img
-                src="https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="Education Journey"
-                className="rounded-2xl shadow-2xl object-cover h-[400px] w-full cursor-pointer"
-                whileHover={{ scale: 1.05, boxShadow: "0 8px 32px 0 rgba(37,99,235,0.25)" }}
-                transition={{ duration: 0.4 }}
-              />
-              <div className="mt-4 text-center">
-                <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Educational Journey</h4>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">Building foundations for innovation</p>
-              </div>
+          {/* Right Side Image — Sticky & Stable while education cards scroll */}
+          <div className="hidden lg:block order-1 lg:order-2 h-full">
+            <div className="sticky top-28 self-start z-10">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+              >
+                <motion.img
+                  src="https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  alt="Education Journey"
+                  className="rounded-2xl shadow-2xl object-cover h-[400px] w-full cursor-pointer"
+                  whileHover={{ scale: 1.05, boxShadow: "0 8px 32px 0 rgba(37,99,235,0.25)" }}
+                  transition={{ duration: 0.4 }}
+                />
+                <div className="mt-4 text-center">
+                  <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Educational Journey</h4>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">Building foundations for innovation</p>
+                </div>
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Skills — Infinite Dual-Row Marquee */}

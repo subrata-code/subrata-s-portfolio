@@ -18,7 +18,7 @@
 /* ── Smooth scroll & Overflow ─────────────────────────────────── */
 html, body {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
