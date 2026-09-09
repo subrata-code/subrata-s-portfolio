@@ -1,0 +1,23 @@
+{
+  "name": "Subrata Bag - Full-Stack Software Developer & Freelance Engineer",
+  "short_name": "Subrata Bag",
+  "description": "Portfolio of Subrata Bag - Full-Stack Developer and Freelance Web Engineer specializing in React, Node.js, MERN, and Three.js 3D web apps.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "/favicon_sb.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon_sb.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

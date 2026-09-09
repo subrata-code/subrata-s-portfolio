@@ -61,44 +61,72 @@ const AboutSection = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-3">
-              About
+              About Me | Full-Stack & Freelance Developer
             </h2>
             <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full mx-auto mb-4" />
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Learn more about my background, software development focus, and technical experience
+              Learn more about my background, software engineering focus, freelance services, and technical expertise
             </p>
           </motion.div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-10">
-          {/* Left Side Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="hidden lg:block"
-          >
-            <div className="sticky top-24">
-              <div className="relative">
-                <div className="absolute -inset-2 bg-gradient-to-r from-indigo-200/50 to-blue-200/50 dark:from-indigo-800/30 dark:to-blue-800/30 rounded-2xl blur-xl" />
-                <motion.img
-                  src={demoImage}
-                  alt="Professional Journey"
-                  className="relative rounded-2xl shadow-lg object-cover h-[400px] w-full cursor-pointer"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </div>
-              <div className="mt-4 text-center">
-                <h4 className="text-lg font-bold text-gray-800 dark:text-white">
+        <div className="grid lg:grid-cols-3 gap-10 items-start">
+          {/* Mobile Image — visible only below lg */}
+          <div className="flex justify-center lg:hidden mb-6">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="relative w-48 sm:w-64"
+            >
+              <div className="absolute -inset-2 bg-gradient-to-r from-indigo-200/50 to-blue-200/50 dark:from-indigo-800/30 dark:to-blue-800/30 rounded-2xl blur-xl" />
+              <motion.img
+                src={demoImage}
+                alt="Subrata Bag - Full-Stack Software Developer & Freelance Web Engineer"
+                className="relative rounded-2xl shadow-lg object-cover w-full aspect-[3/4]"
+              />
+              <div className="mt-3 text-center">
+                <h4 className="text-base font-bold text-gray-800 dark:text-white">
                   {profileData.name}
                 </h4>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">
-                  {profileData.currentPosition}
+                <p className="text-gray-500 dark:text-gray-400 text-xs">
+                  Full-Stack Developer & Freelancer
                 </p>
               </div>
+            </motion.div>
+          </div>
+
+          {/* Desktop Image — sticky sidebar, hidden below lg */}
+          <div className="hidden lg:block h-full">
+            <div className="sticky top-28 self-start z-10">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+              >
+                <div className="relative">
+                  <div className="absolute -inset-2 bg-gradient-to-r from-indigo-200/50 to-blue-200/50 dark:from-indigo-800/30 dark:to-blue-800/30 rounded-2xl blur-xl" />
+                  <motion.img
+                    src={demoImage}
+                    alt="Subrata Bag - Full-Stack Software Developer & Freelance Web Engineer"
+                    className="relative rounded-2xl shadow-lg object-cover h-[400px] w-full cursor-pointer"
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </div>
+                <div className="mt-4 text-center">
+                  <h4 className="text-lg font-bold text-gray-800 dark:text-white">
+                    {profileData.name}
+                  </h4>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm">
+                    Full-Stack Developer & Freelancer
+                  </p>
+                </div>
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Content Area */}
           <div className="lg:col-span-2">
@@ -111,10 +139,10 @@ const AboutSection = () => {
             >
               <motion.div variants={fadeInUp}>
                 <h3 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">
-                  {profileData.name}
+                  {profileData.name} — Full-Stack Software Developer
                 </h3>
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                  Subrata Bag is a final-year B.Tech Computer Science & Engineering student at Calcutta Institute of Technology (affiliated with MAKAUT) with a strong focus on software development. With practical development experience across frontend and backend engineering, he builds modern web applications and interactive digital experiences. His core technical toolkit spans React, JavaScript, Node.js, Express.js, and MongoDB, alongside browser-based 3D web development using Three.js and React Three Fiber. Grounded in computer science fundamentals and Data Structures & Algorithms, Subrata is focused on writing clean, efficient code and creating real-world software applications that deliver intuitive, high-quality user experiences.
+                  Subrata Bag is a full-stack software developer and final-year B.Tech Computer Science & Engineering student at Calcutta Institute of Technology (affiliated with MAKAUT). With extensive hands-on experience building modern, responsive web applications and interactive 3D digital experiences, he delivers end-to-end software solutions for clients and teams worldwide. His core technical stack spans <strong>React, Next.js, JavaScript, Node.js, Express.js, and MongoDB</strong>, complemented by advanced browser-based 3D graphics using <strong>Three.js and React Three Fiber</strong>. Combining strong computer science fundamentals, Data Structures & Algorithms, and clean code principles, Subrata builds scalable, production-grade applications that deliver intuitive, high-performance user experiences.
                 </p>
               </motion.div>
 
@@ -129,8 +157,8 @@ const AboutSection = () => {
                 {[
                   { icon: <GraduationCap className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />, text: profileData.education[0].degree, label: "Education" },
                   { icon: <Calendar className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />, text: "Calcutta Institute of Technology (MAKAUT)", label: "Institution" },
-                  { icon: <Briefcase className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />, text: "Three.js / React Three Fiber Developer", label: "Relevant Experience" },
-                  { icon: <FileText className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />, text: "Final-Year B.Tech CSE Student", label: "Academic Status" },
+                  { icon: <Briefcase className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />, text: "Three.js / React Three Fiber Developer & Freelancer", label: "Professional Focus" },
+                  { icon: <FileText className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />, text: "Available for Remote & Freelance Contracts", label: "Work Availability" },
                 ].map((item, index) => (
                   <CredentialItem key={index} {...item} />
                 ))}

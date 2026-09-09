@@ -27,41 +27,68 @@ const TeachingSection = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white mb-4">
-              Journey
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white mb-4">
+              Engineering Mindset & Development Journey
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
-              Growing as a software engineer through code, curiosity, and continuous learning
+              Engineering robust full-stack software and interactive 3D web applications through continuous learning, clean architecture, and problem solving.
             </p>
           </motion.div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-10">
-          {/* Left Side Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="hidden lg:block"
-          >
-            <div className="sticky top-24">
+        <div className="grid lg:grid-cols-3 gap-10 items-start">
+          {/* Mobile Image — visible only below lg */}
+          <div className="flex justify-center lg:hidden mb-6">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="relative w-48 sm:w-64"
+            >
               <motion.img
                 src={journey}
-                alt="Coding Journey"
-                className="rounded-2xl shadow-2xl object-cover h-[400px] w-full cursor-pointer"
-                whileHover={{ scale: 1.05, boxShadow: "0 8px 32px 0 rgba(99,102,241,0.25)" }}
-                transition={{ duration: 0.4 }}
+                alt="Subrata Bag - Software Engineering Mindset & Coding Journey"
+                className="rounded-2xl shadow-2xl object-cover w-full aspect-[3/4]"
               />
-              <div className="mt-4 text-center">
-                <h4 className="text-lg font-semibold text-gray-800 dark:text-white">
+              <div className="mt-3 text-center">
+                <h4 className="text-base font-semibold text-gray-800 dark:text-white">
                   Engineering Mindset
                 </h4>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                <p className="text-gray-600 dark:text-gray-400 text-xs">
                   Building real-world solutions through code
                 </p>
               </div>
+            </motion.div>
+          </div>
+
+          {/* Desktop Image — sticky sidebar, hidden below lg */}
+          <div className="hidden lg:block h-full">
+            <div className="sticky top-28 self-start z-10">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+              >
+                <motion.img
+                  src={journey}
+                  alt="Subrata Bag - Software Engineering Mindset & Coding Journey"
+                  className="rounded-2xl shadow-2xl object-cover h-[400px] w-full cursor-pointer"
+                  whileHover={{ scale: 1.05, boxShadow: "0 8px 32px 0 rgba(99,102,241,0.25)" }}
+                  transition={{ duration: 0.4 }}
+                />
+                <div className="mt-4 text-center">
+                  <h4 className="text-lg font-semibold text-gray-800 dark:text-white">
+                    Engineering Mindset
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    Building real-world solutions through code
+                  </p>
+                </div>
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Content Area */}
           <div className="lg:col-span-2 space-y-10">
@@ -105,7 +132,7 @@ const TeachingSection = () => {
               ].map((method, idx) => (
                 <motion.div
                   key={idx}
-                  className="flex items-start gap-5 p-7 bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-indigo-400/20 dark:hover:shadow-indigo-500/10 transition-all duration-400 border-l-4 border-indigo-500 cursor-pointer"
+                  className="flex items-start gap-4 sm:gap-5 p-5 sm:p-7 bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-indigo-400/20 dark:hover:shadow-indigo-500/10 transition-all duration-400 border-l-4 border-indigo-500 cursor-pointer"
                   variants={fadeInUp}
                   initial="hidden"
                   whileInView="visible"

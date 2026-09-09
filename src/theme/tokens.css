@@ -1,0 +1,52 @@
+/* src/theme/tokens.css */
+:root {
+  /* Primary palette */
+  --color-primary: hsl(210, 50%, 55%); /* teal */
+  --color-primary-light: hsl(210, 50%, 65%);
+  --color-primary-dark: hsl(210, 50%, 45%);
+
+  /* Accent */
+  --color-accent: hsl(260, 60%, 55%);
+  --color-accent-light: hsl(260, 60%, 65%);
+  --color-accent-dark: hsl(260, 60%, 45%);
+
+  /* Backgrounds */
+  --color-bg-light: hsl(0, 0%, 100%);
+  --color-bg-dark: hsl(220, 12%, 12%);
+  --color-surface-light: hsla(0, 0%, 100%, 0.8);
+  --color-surface-dark: hsla(220, 12%, 12%, 0.8);
+
+  /* Text */
+  --color-text-light: hsl(220, 12%, 12%);
+  --color-text-dark: hsl(0, 0%, 100%);
+
+  /* Spacing */
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.5rem;
+  --spacing-6: 2rem;
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] {
+  --color-bg-light: var(--color-bg-dark);
+  --color-surface-light: var(--color-surface-dark);
+  --color-text-light: var(--color-text-dark);
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: var(--color-surface-light);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+}

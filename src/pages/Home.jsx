@@ -15,25 +15,16 @@ import Footer from "../components/Footer";
  *
  * direction: "left" | "right" | "bottom" | "top"
  */
-const directionOffsets = {
-  left:   { x: -120, y: 0 },
-  right:  { x: 120,  y: 0 },
-  bottom: { x: 0,    y: 80 },
-  top:    { x: 0,    y: -80 },
-};
-
-const SectionReveal = ({ children, direction = "bottom", delay = 0 }) => {
-  const offset = directionOffsets[direction];
-
+const SectionReveal = ({ children, delay = 0 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, x: offset.x, y: offset.y, scale: 0.97 }}
-      whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
-      viewport={{ once: true, margin: "-80px" }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: "-40px" }}
       transition={{
-        duration: 0.8,
+        duration: 0.6,
         delay,
-        ease: [0.25, 0.8, 0.25, 1],
+        ease: "easeOut",
       }}
     >
       {children}
@@ -47,31 +38,31 @@ const Home = () => {
       {/* Hero has its own entrance animations */}
       <Hero />
 
-      <SectionReveal direction="left">
+      <SectionReveal>
         <AboutSection />
       </SectionReveal>
 
-      <SectionReveal direction="right">
+      <SectionReveal>
         <Education />
       </SectionReveal>
 
-      <SectionReveal direction="left">
+      <SectionReveal>
         <TeachingSection />
       </SectionReveal>
 
-      <SectionReveal direction="bottom">
+      <SectionReveal>
         <DeveloperActivity />
       </SectionReveal>
 
-      <SectionReveal direction="right">
+      <SectionReveal>
         <ProjectsSection />
       </SectionReveal>
 
-      <SectionReveal direction="left">
+      <SectionReveal>
         <ContactSection />
       </SectionReveal>
 
-      <SectionReveal direction="bottom" delay={0.1}>
+      <SectionReveal delay={0.1}>
         <Footer />
       </SectionReveal>
     </>
