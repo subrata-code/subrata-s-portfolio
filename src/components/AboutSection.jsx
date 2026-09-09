@@ -71,7 +71,33 @@ const AboutSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-10 items-start">
-          {/* Left Side Image — Sticky & Stable while content scrolls */}
+          {/* Mobile Image — visible only below lg */}
+          <div className="flex justify-center lg:hidden mb-6">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="relative w-48 sm:w-64"
+            >
+              <div className="absolute -inset-2 bg-gradient-to-r from-indigo-200/50 to-blue-200/50 dark:from-indigo-800/30 dark:to-blue-800/30 rounded-2xl blur-xl" />
+              <motion.img
+                src={demoImage}
+                alt="Subrata Bag - Full-Stack Software Developer & Freelance Web Engineer"
+                className="relative rounded-2xl shadow-lg object-cover w-full aspect-[3/4]"
+              />
+              <div className="mt-3 text-center">
+                <h4 className="text-base font-bold text-gray-800 dark:text-white">
+                  {profileData.name}
+                </h4>
+                <p className="text-gray-500 dark:text-gray-400 text-xs">
+                  Full-Stack Developer & Freelancer
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Desktop Image — sticky sidebar, hidden below lg */}
           <div className="hidden lg:block h-full">
             <div className="sticky top-28 self-start z-10">
               <motion.div

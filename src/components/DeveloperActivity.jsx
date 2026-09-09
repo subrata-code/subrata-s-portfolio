@@ -162,7 +162,7 @@ export default function DeveloperActivity() {
           >
             <div>
               {/* Header */}
-              <div className="flex items-center justify-between border-b border-gray-100 pb-5 mb-6">
+              <div className="flex items-center justify-between border-b border-gray-100 dark:border-gray-700 pb-4 sm:pb-5 mb-4 sm:mb-6">
                 <div className="flex items-center gap-4">
                   <div className="relative">
                     <img
@@ -188,28 +188,28 @@ export default function DeveloperActivity() {
               </div>
 
               {/* Stats Grid */}
-              <div className="grid grid-cols-3 gap-4 mb-6">
+              <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-4 sm:mb-6">
                 <div className="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-xl text-center border border-gray-100 dark:border-gray-600">
                   <div className="flex justify-center mb-1 text-gray-700">
                     <BookOpen className="w-5 h-5" />
                   </div>
-                  <div className="text-2xl font-bold text-gray-900 dark:text-white">{github.publicRepos}</div>
+                  <div className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">{github.publicRepos}</div>
                   <div className="text-xs font-medium text-gray-500 dark:text-gray-400 mt-0.5">Repositories</div>
                 </div>
 
-                <div className="bg-gray-50 p-4 rounded-xl text-center border border-gray-100">
+                <div className="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-xl text-center border border-gray-100 dark:border-gray-600">
                   <div className="flex justify-center mb-1 text-gray-700">
                     <Users className="w-5 h-5" />
                   </div>
-                  <div className="text-2xl font-bold text-gray-900 dark:text-white">{github.followers}</div>
+                  <div className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">{github.followers}</div>
                   <div className="text-xs font-medium text-gray-500 dark:text-gray-400 mt-0.5">Followers</div>
                 </div>
 
-                <div className="bg-gray-50 p-4 rounded-xl text-center border border-gray-100">
+                <div className="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-xl text-center border border-gray-100 dark:border-gray-600">
                   <div className="flex justify-center mb-1 text-gray-700">
                     <Layers className="w-5 h-5" />
                   </div>
-                  <div className="text-2xl font-bold text-gray-900 dark:text-white">{github.following}</div>
+                  <div className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">{github.following}</div>
                   <div className="text-xs font-medium text-gray-500 dark:text-gray-400 mt-0.5">Following</div>
                 </div>
               </div>

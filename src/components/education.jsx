@@ -124,7 +124,29 @@ const Education = () => {
             </motion.div>
           </div>
 
-          {/* Right Side Image — Sticky & Stable while education cards scroll */}
+          {/* Mobile Image — visible only below lg */}
+          <div className="flex justify-center lg:hidden mb-6 order-1">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="relative w-48 sm:w-64"
+            >
+              <motion.img
+                src="https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Subrata Bag - Computer Science Education & Academic Foundation"
+                loading="lazy"
+                className="rounded-2xl shadow-2xl object-cover w-full aspect-[3/4]"
+              />
+              <div className="mt-3 text-center">
+                <h4 className="text-base font-semibold text-gray-800 dark:text-white">Educational Journey</h4>
+                <p className="text-gray-600 dark:text-gray-400 text-xs">Building foundations for innovation</p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Desktop Image — sticky sidebar, hidden below lg */}
           <div className="hidden lg:block order-1 lg:order-2 h-full">
             <div className="sticky top-28 self-start z-10">
               <motion.div

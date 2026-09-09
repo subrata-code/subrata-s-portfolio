@@ -50,7 +50,7 @@ const Stats = () => {
             transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
             className="text-center cursor-pointer rounded-xl p-5 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
           >
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-1 group-hover:text-indigo-300 transition-colors duration-300">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-1 group-hover:text-indigo-300 transition-colors duration-300">
               <AnimatedCounter target={stat.number} suffix={stat.suffix} inView={inView} />
             </h2>
             <p className="text-gray-400 text-sm font-medium">

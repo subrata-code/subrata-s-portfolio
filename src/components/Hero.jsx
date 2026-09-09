@@ -24,7 +24,7 @@ const itemVariants = {
 
 const Hero = () => {
   return (
-    <div className="hero w-full relative overflow-hidden flex flex-col" style={{ minHeight: 'calc(100vh - 5rem)' }}>
+    <div className="hero w-full relative overflow-hidden flex flex-col" style={{ minHeight: 'calc(100dvh - 5rem)' }}>
       {/* Gradient Mesh Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f1e] via-[#0f172a] to-[#0c1220]">
         <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-600/20 rounded-full blur-[100px]" />
@@ -40,7 +40,7 @@ const Hero = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex-1 flex flex-col md:flex-row items-center justify-between px-6 md:px-10 lg:px-16 py-8 max-w-7xl mx-auto w-full">
+      <div className="relative z-10 flex-1 flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 md:px-10 lg:px-16 py-6 sm:py-8 max-w-7xl mx-auto w-full">
         {/* Left Section */}
         <motion.div
           className="w-full md:w-1/2 flex flex-col gap-4 text-center md:text-left"
@@ -61,7 +61,7 @@ const Hero = () => {
 
           <motion.h1
             variants={itemVariants}
-            className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight"
           >
             <span className="text-white">Full-Stack </span>
             <span className="bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -116,12 +116,12 @@ const Hero = () => {
 
         {/* Right Section — Image */}
         <motion.div
-          className="w-full md:w-5/12 flex items-center justify-center mt-8 md:mt-0"
+          className="w-full md:w-5/12 flex items-center justify-center mt-6 md:mt-0"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         >
-          <div className="relative w-3/4 max-w-sm">
+          <div className="relative w-1/2 sm:w-3/4 max-w-sm">
             <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500/20 via-blue-500/20 to-purple-500/20 rounded-2xl blur-2xl" />
             <div className="relative rounded-2xl overflow-hidden shadow-2xl hero-image-glow group">
               <img
@@ -145,7 +145,7 @@ const Hero = () => {
       </div>
 
       {/* Stats Section — Part of the same viewport */}
-      <div className="relative z-10 py-6 hidden sm:block">
+      <div className="relative z-10 py-4 sm:py-6">
         <Stats />
       </div>
     </div>

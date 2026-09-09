@@ -27,7 +27,7 @@ const TeachingSection = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white mb-4">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white mb-4">
               Engineering Mindset & Development Journey
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
@@ -37,7 +37,32 @@ const TeachingSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-10 items-start">
-          {/* Left Side Image — Sticky & Stable while methods & approach scroll */}
+          {/* Mobile Image — visible only below lg */}
+          <div className="flex justify-center lg:hidden mb-6">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="relative w-48 sm:w-64"
+            >
+              <motion.img
+                src={journey}
+                alt="Subrata Bag - Software Engineering Mindset & Coding Journey"
+                className="rounded-2xl shadow-2xl object-cover w-full aspect-[3/4]"
+              />
+              <div className="mt-3 text-center">
+                <h4 className="text-base font-semibold text-gray-800 dark:text-white">
+                  Engineering Mindset
+                </h4>
+                <p className="text-gray-600 dark:text-gray-400 text-xs">
+                  Building real-world solutions through code
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Desktop Image — sticky sidebar, hidden below lg */}
           <div className="hidden lg:block h-full">
             <div className="sticky top-28 self-start z-10">
               <motion.div
@@ -107,7 +132,7 @@ const TeachingSection = () => {
               ].map((method, idx) => (
                 <motion.div
                   key={idx}
-                  className="flex items-start gap-5 p-7 bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-indigo-400/20 dark:hover:shadow-indigo-500/10 transition-all duration-400 border-l-4 border-indigo-500 cursor-pointer"
+                  className="flex items-start gap-4 sm:gap-5 p-5 sm:p-7 bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-indigo-400/20 dark:hover:shadow-indigo-500/10 transition-all duration-400 border-l-4 border-indigo-500 cursor-pointer"
                   variants={fadeInUp}
                   initial="hidden"
                   whileInView="visible"

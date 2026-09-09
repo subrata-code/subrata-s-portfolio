@@ -60,7 +60,7 @@ const ProjectCard = ({ project, onClick }) => (
       src={project.image}
       alt={`${project.title} — Web Development Project by Subrata Bag`}
       loading="lazy"
-      className="w-full h-48 object-cover"
+      className="w-full h-32 sm:h-48 object-cover"
     />
     <div className="p-6 text-left flex-1 flex flex-col justify-between">
       <div>
@@ -81,49 +81,65 @@ const ProjectCard = ({ project, onClick }) => (
 const Modal = ({ project, onClose }) => (
   <AnimatePresence>
     {project && (
-      <motion.div
-        initial={{ x: "100%" }}
-        animate={{ x: 0 }}
-        exit={{ x: "100%" }}
-        transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        className="fixed top-0 right-0 w-full sm:w-1/2 h-full bg-white dark:bg-gray-900 shadow-2xl z-50 p-8 overflow-auto"
-        style={{ maxWidth: "500px" }}
-      >
-        <button
-          className="absolute top-4 right-4 text-gray-500 dark:text-gray-400 text-2xl"
+      <>
+        {/* Backdrop overlay */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
           onClick={onClose}
+        />
+        {/* Slide-in panel */}
+        <motion.div
+          initial={{ x: "100%" }}
+          animate={{ x: 0 }}
+          exit={{ x: "100%" }}
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          className="fixed top-0 right-0 w-full sm:w-4/5 md:w-3/5 lg:w-1/2 h-full bg-white dark:bg-gray-900 shadow-2xl z-50 p-5 sm:p-8 overflow-auto"
+          style={{ maxWidth: "600px" }}
         >
-          &times;
-        </button>
-        <img src={project.image} alt={project.title} className="w-full h-48 object-cover mb-4 rounded-lg" />
-        <h3 className="text-2xl font-bold mb-2 dark:text-white">{project.title}</h3>
-        <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
-        <span className="inline-block bg-blue-50 dark:bg-indigo-950 text-primary dark:text-indigo-400 text-xs px-3 py-1 rounded-full mb-4">
-          {project.category}
-        </span>
-        <div className="flex gap-4 mt-4">
-          {project.github && (
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-gray-800 text-white rounded-full"
-            >
-              GitHub
-            </a>
-          )}
-          {project.live && project.live !== "" && (
-            <a
-              href={project.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-blue-600 text-white rounded-full"
-            >
-              Live Demo
-            </a>
-          )}
-        </div>
-      </motion.div>
+          <button
+            className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-xl hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            onClick={onClose}
+            aria-label="Close project details"
+          >
+            &times;
+          </button>
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-40 sm:h-48 md:h-56 object-cover mb-4 rounded-xl"
+          />
+          <h3 className="text-xl sm:text-2xl font-bold mb-2 dark:text-white pr-10">{project.title}</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm sm:text-base mb-4 leading-relaxed">{project.description}</p>
+          <span className="inline-block bg-blue-50 dark:bg-indigo-950 text-primary dark:text-indigo-400 text-xs px-3 py-1 rounded-full mb-4 font-medium">
+            {project.category}
+          </span>
+          <div className="flex flex-wrap gap-3 mt-4">
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 sm:flex-none px-5 py-2.5 bg-gray-800 hover:bg-gray-700 text-white rounded-full text-center text-sm font-medium transition-colors"
+              >
+                GitHub
+              </a>
+            )}
+            {project.live && project.live !== "" && (
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 sm:flex-none px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-center text-sm font-medium transition-colors"
+              >
+                Live Demo
+              </a>
+            )}
+          </div>
+        </motion.div>
+      </>
     )}
   </AnimatePresence>
 );
